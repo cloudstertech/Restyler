@@ -1,4 +1,4 @@
-import colors from "./colors";
+import { colors, palette } from "./colors";
 import spacing from "../common/spacing";
 import borderRadius from '../common/borderRadii';
 import breakpoints from '../common/breakpoints';
@@ -32,6 +32,9 @@ const theme = createTheme({
     buttonVariants: {
         ...buttons
     },
+
+    // just in case we need them
+    palette
 });
 
 export type Theme = typeof theme;

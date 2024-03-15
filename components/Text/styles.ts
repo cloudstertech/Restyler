@@ -1,32 +1,44 @@
 
 const body = {
-    fontSize: 16,
-    lineHeight: 24,
+    fontSize: 15,
+    lineHeight: 18,
     color: "body"
 };
 
 const text = {
     h1: {
-        fontSize: 28,
-        lineHeight: 36,
+        fontSize: 32,
+        lineHeight: 38,
         fontWeight: 'bold',
         color: "headings"
     },
     h2: {
-        fontSize: 24,
-        lineHeight: 32,
+        fontSize: 28,
+        lineHeight: 33,
         fontWeight: 'bold',
         color: "headings"
     },
     h3: {
-        fontSize: 20,
-        lineHeight: 26,
+        fontSize: 23,
+        lineHeight: 29,
         fontWeight: 'bold',
         color: "headings"
     },
     h4: {
-        fontSize: 16,
+        fontSize: 20,
         lineHeight: 24,
+        fontWeight: 'bold',
+        color: "headings"
+    }, 
+    h5: {
+        fontSize: 18,
+        lineHeight: 22,
+        fontWeight: 'bold',
+        color: "headings"
+    }, 
+    h6: {
+        fontSize: 15,
+        lineHeight: 18,
         fontWeight: 'bold',
         color: "headings"
     },    
@@ -39,7 +51,7 @@ const text = {
     },
     small: {
         ...body,
-        fontSize: 12
+        fontSize: 13
     }, 
 };
 

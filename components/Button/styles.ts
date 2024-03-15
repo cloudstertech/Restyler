@@ -140,7 +140,7 @@ const secondary: StatefulButton = deepmerge(base, {
 });
 
 
-// size variants
+// Base styling for size variants 
 const small: StatefulButton = {   
     defaults: {
         text: {
@@ -199,6 +199,7 @@ const pill: StatefulButton = {
  */
 const primaryPill: StatefulButton = deepmerge(primary, pill);
 const secondaryPill: StatefulButton = deepmerge(secondary, pill);
+
 
 /**
  * Export typing
