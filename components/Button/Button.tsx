@@ -105,7 +105,7 @@ const Button = ({
     accessibilityHint,
     style = {},
     ...rest // BoxProps
-}: ButtonProps) => {
+}: ButtonProps): JSX.Element => {
 
     const theme = useTheme<Theme>();
 
