@@ -60,7 +60,7 @@ const base: StatefulButton = {
             height: 50,
             borderWidth: 1,
             flexDirection: "row",
-            borderRadius: "md",
+            borderRadius: "sm",
             paddingRight: "lg",
             paddingLeft: "md",
             alignItems: "center",
@@ -140,6 +140,90 @@ const secondary: StatefulButton = deepmerge(base, {
 });
 
 
+/**
+ * Secondary button; setup differences on top of base
+ */
+const danger: StatefulButton = deepmerge(base, {
+    defaults: {
+        text: {
+            color: "btnDangerText"
+        },
+        icon: {
+            color: "btnDangerText"
+        },
+        spinner: {
+            color: "btnDangerText"
+        },
+        button: {
+            backgroundColor: "btnDangerBg",
+            borderColor: "btnDangerBg"
+        },
+    },
+    active: {       
+        button: {
+            borderColor: "btnDangerBgActive",
+            backgroundColor: "btnDangerBgActive"
+        }
+    }    
+});
+
+
+/**
+ * Secondary button; setup differences on top of base
+ */
+const success: StatefulButton = deepmerge(base, {
+    defaults: {
+        text: {
+            color: "btnSuccessText"
+        },
+        icon: {
+            color: "btnSuccessText"
+        },
+        spinner: {
+            color: "btnSuccessText"
+        },
+        button: {
+            backgroundColor: "btnSuccessBg",
+            borderColor: "btnSuccessBg"
+        },
+    },
+    active: {       
+        button: {
+            borderColor: "btnSuccessBgActive",
+            backgroundColor: "btnSuccessBgActive"
+        }
+    }    
+});
+
+
+/**
+ * Secondary button; setup differences on top of base
+ */
+const warning: StatefulButton = deepmerge(base, {
+    defaults: {
+        text: {
+            color: "btnWarningText"
+        },
+        icon: {
+            color: "btnWarningText"
+        },
+        spinner: {
+            color: "btnWarningText"
+        },
+        button: {
+            backgroundColor: "btnWarningBg",
+            borderColor: "btnWarningBg"
+        },
+    },
+    active: {       
+        button: {
+            borderColor: "btnWarningBgActive",
+            backgroundColor: "btnWarningBgActive"
+        }
+    }    
+});
+
+
 // Base styling for size variants 
 const small: StatefulButton = {   
     defaults: {
@@ -168,6 +252,9 @@ const small: StatefulButton = {
  */
 const primarySmall: StatefulButton = deepmerge(primary, small);
 const secondarySmall: StatefulButton = deepmerge(secondary, small);
+const dangerSmall: StatefulButton = deepmerge(danger, small);
+const successSmall: StatefulButton = deepmerge(success, small);
+const warningSmall: StatefulButton = deepmerge(warning, small);
 
 
 
@@ -199,6 +286,9 @@ const pill: StatefulButton = {
  */
 const primaryPill: StatefulButton = deepmerge(primary, pill);
 const secondaryPill: StatefulButton = deepmerge(secondary, pill);
+const dangerPill: StatefulButton = deepmerge(danger, pill)
+const warningPill: StatefulButton = deepmerge(warning, pill)
+const successPill: StatefulButton = deepmerge(success, pill)
 
 
 /**
@@ -206,8 +296,18 @@ const secondaryPill: StatefulButton = deepmerge(secondary, pill);
  */
 export type PrimaryButton = typeof primary;
 export type SecondaryButton = typeof secondary;
+
+export type DangerButton = typeof danger;
+export type SuccessButton = typeof success;
+export type WarningButton = typeof warning;
+
 export type PrimarySmallButton = typeof primarySmall;
 export type SecondarySmallButton = typeof secondarySmall;
+
+export type DangerSmallButton = typeof dangerSmall;
+export type SuccessSmallButton = typeof successSmall;
+export type WarningSmallButton = typeof warningSmall;
+
 export type PrimaryPillButton = typeof primaryPill;
 export type SecondaryPillButton = typeof secondaryPill;
 
@@ -217,12 +317,22 @@ export default {
     // main variants
     primary,
     secondary,
+
+    danger,
+    success,
+    warning,
     
     // small variants
     "primary-small": primarySmall,
     "secondary-small": secondarySmall,
+    "danger-small": dangerSmall,
+    "success-small": successSmall,
+    "warning-small": warningSmall,
 
     // shape variants
     "primary-pill": primaryPill,
     "secondary-pill": secondaryPill,
+    "danger-pill": dangerPill,
+    "success-pill": successPill,
+    "warning-pill": warningPill,
 };

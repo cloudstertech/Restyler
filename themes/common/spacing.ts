@@ -21,6 +21,8 @@ const spacing = {
     nlg: 16,
     nxl: 20,
     nxxl: 24,
+
+    auto: 'auto'
 };
 
 export type Spacing = typeof spacing;

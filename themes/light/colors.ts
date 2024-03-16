@@ -27,7 +27,6 @@ const palette: PaletteTokens = {
     successLight: '#06B722',
     successVeryLight: '#CEFDDE',
 
-
     gray900: '#181D25',
     gray800: '#404B5A',
     gray700: '#606E80',
@@ -50,21 +49,38 @@ const colors: ColorTokens = {
 
     // general
     background: "#fefefe",
-    line: "#d3d3d3",
+    line: palette.gray300,
+    border: palette.gray200,
 
     // text
     body: palette.gray900,
-    headings: "#333333",
-    muted: "#7a7a7a",   
+    headings: palette.gray900,
+    muted: palette.gray500,   
 
     // Buttons
-    btnPrimaryBg: "#0051FF",
+    btnPrimaryBg: palette.primary,
     btnPrimaryText: "white",
-    btnPrimaryBgActive: "#0041CC",   
+    btnPrimaryBgActive: palette.primaryDark,   
   
     btnSecondaryBg: "white",
-    btnSecondaryText: "#0051FF",
-    btnSecondaryBgActive: "#E6EEFF",    
+    btnSecondaryText: palette.primary, 
+    btnSecondaryBgActive: palette.primaryVeryLight,    
+
+    btnDangerBg: palette.danger,
+    btnDangerText: "white",
+    btnDangerBgActive: palette.dangerDark, 
+    
+    btnSuccessBg: palette.success,
+    btnSuccessText: "white",
+    btnSuccessBgActive: palette.successDark, 
+
+    btnWarningBg: palette.warning,
+    btnWarningText: "white",
+    btnWarningBgActive: palette.warningDark, 
+
+    switchThumb: 'white',
+    switchTrackOn: palette.primary,
+    switchTrackOff: palette.gray200,
 }
 
 export { colors, palette };

@@ -9,6 +9,7 @@ type ColorTokens = {
 
      background: string;
      line: string;
+     border: string;
 
      // text
      body: string;
@@ -23,6 +24,22 @@ type ColorTokens = {
     btnSecondaryBg: string;
     btnSecondaryText: string;
     btnSecondaryBgActive: string;        
+
+    btnDangerBg: string;
+    btnDangerText: string;
+    btnDangerBgActive: string;
+
+    btnSuccessBg: string;
+    btnSuccessText: string;
+    btnSuccessBgActive: string;
+
+    btnWarningBg: string;
+    btnWarningText: string;
+    btnWarningBgActive: string;
+
+    switchThumb: string;
+    switchTrackOn: string;
+    switchTrackOff: string;
 }
 
 

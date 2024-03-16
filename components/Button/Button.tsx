@@ -6,6 +6,7 @@ import Text from "../Text";
 import Box from "../Box";
 import { Theme } from "../../themes";
 import { Feather } from '@expo/vector-icons';
+import { getMappedColorFromToken } from "../../helpers/themeHelpers";
 
 /**
  * Button variant types
@@ -114,15 +115,6 @@ const Button = ({
     // track this state so that we can apply an 'active' style
     const [isPressed, setIsPressed] = useState(false);
 
-    // find the color using the color token; easier way to do this; 
-    // we could use Restyle instead here, but we only need color so seems like overkill
-    const getMappedColorFromToken = (token: string | undefined) => {
-        if (token && theme.colors.hasOwnProperty(token)) {
-            return theme.colors[token];            
-        }
-        return null;
-    }
-
     ///////////////////////////////////////////////
     // START SETUP DEFAULTS //
     ///////////////////////////////////////////////    
@@ -164,8 +156,8 @@ const Button = ({
     /////////////////////////////////////////            
 
     // find the named color by token; poor mans restyle here; could use Restyle instead if Icon / ActivityIndicator was a Restyle component
-    const iconStyles = { color: getMappedColorFromToken(variantProps?.icon?.color) };
-    const spinnerColor = getMappedColorFromToken(variantProps?.spinner?.color);
+    const iconStyles = { color: getMappedColorFromToken(theme, variantProps?.icon?.color) };
+    const spinnerColor = getMappedColorFromToken(theme, variantProps?.spinner?.color);
 
     return (
         <BaseButton
@@ -194,7 +186,7 @@ const Button = ({
                 </Box>
             )}
             {!loading && (
-                <Text variant={"body"} {...variantProps?.text}>
+                <Text variant={"bold"} {...variantProps?.text}>
                     {children}
                 </Text>
             )}

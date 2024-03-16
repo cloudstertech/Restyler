@@ -1,5 +1,5 @@
 
-import { ColorTokens } from "../common/colors.tokens"
+import { ColorTokens, PaletteTokens } from "../common/colors.tokens"
 
 
 const colours: ColorTokens = {
@@ -12,6 +12,7 @@ const colours: ColorTokens = {
     // general
     background: "#303030",
     line: "#616161",
+    border: "white",
 
     // text
     body: "#dcdcdc",
@@ -21,11 +22,23 @@ const colours: ColorTokens = {
     // buttons
     btnPrimaryBg: "white",
     btnPrimaryText: "#303030",
-    btnPrimaryBgActive: "#ababab",    
+    btnPrimaryBgActive: "#ababab",
 
     btnSecondaryBg: "#303030",
     btnSecondaryText: "#dcdcdc",
-    btnSecondaryBgActive: "#929292",        
+    btnSecondaryBgActive: "#929292",
+    btnDangerBg: "",
+    btnDangerText: "",
+    btnDangerBgActive: "",
+    btnSuccessBg: "",
+    btnSuccessText: "",
+    btnSuccessBgActive: "",
+    btnWarningBg: "",
+    btnWarningText: "",
+    btnWarningBgActive: "",
+    switchThumb: "",
+    switchTrackOn: "",
+    switchTrackOff: ""
 }
 
 export default colours;

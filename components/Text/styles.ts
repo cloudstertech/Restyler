@@ -2,48 +2,57 @@
 const body = {
     fontSize: 15,
     lineHeight: 18,
-    color: "body"
+    color: "body",
+    fontFamily: "inter-regular"
+};
+
+const headings = {
+    fontFamily: "inter-semibold"
 };
 
 const text = {
     h1: {
         fontSize: 32,
-        lineHeight: 38,
-        fontWeight: 'bold',
-        color: "headings"
+        lineHeight: 38,        
+        color: "headings",
+        ...headings
     },
     h2: {
         fontSize: 28,
-        lineHeight: 33,
-        fontWeight: 'bold',
-        color: "headings"
+        lineHeight: 33,        
+        color: "headings",
+        ...headings
     },
     h3: {
         fontSize: 23,
-        lineHeight: 29,
-        fontWeight: 'bold',
-        color: "headings"
+        lineHeight: 29,        
+        color: "headings",
+        ...headings
     },
     h4: {
         fontSize: 20,
-        lineHeight: 24,
-        fontWeight: 'bold',
-        color: "headings"
+        lineHeight: 24,        
+        color: "headings",
+        ...headings
     }, 
     h5: {
         fontSize: 18,
-        lineHeight: 22,
-        fontWeight: 'bold',
-        color: "headings"
+        lineHeight: 22,        
+        color: "headings",
+        ...headings
     }, 
     h6: {
         fontSize: 15,
-        lineHeight: 18,
-        fontWeight: 'bold',
-        color: "headings"
+        lineHeight: 18,        
+        color: "headings",
+        ...headings
     },    
     body: {
         ...body
+    },  
+    bold: {
+        ...body,
+        fontFamily: "inter-medium"
     },   
     muted: {
         ...body,
